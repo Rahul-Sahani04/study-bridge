@@ -1,0 +1,77 @@
+.study__text{
+    font-weight: 900;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: Poppins;
+    font-style: normal;
+}
+
+.bridge__text{
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: Patrick Hand;
+    font-style: normal;
+}
+
+.login__form{
+    margin-top: 2rem;
+
+    font-family: Poppins;
+
+    background-color: var(--bg-primary) ;
+    border-radius: 10px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login__form Button{
+    padding: 1.2rem;
+    font-size: 24px;
+    width: 100%;
+
+    background-color: var(--bg-secondary);
+}
+
+.login__form button:hover{
+    background-color: var(--text-primary) !important;
+    color: var(--text-primary);
+}
+
+.login__form .input__login{
+    padding: 0.6rem;
+    padding-left: 1rem;
+    width: 100%;
+
+    background-color: #C6AC8F;
+}
+.login__form .input__login input{
+    background-color: #C6AC8F;
+}
+.login__form .ant-input-affix-wrapper{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #C6AC8F !important;
+}
+
+
+.social__login{
+
+    font-size: 28px;
+    color:  var(--bg-secondary);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social__login span:hover{
+    color: var(--text-primary);
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.review__card{
+    width: 240px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
+    border-radius: 28px;
+    padding: 1rem;
+    margin: 1rem;
+    flex-shrink: 0;
+}
+
+.review__card__avatar{
+    background-color: var(--bg-secondary);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.review__card__avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.review__card__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
