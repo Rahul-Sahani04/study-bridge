@@ -7,12 +7,16 @@ import { Button, Checkbox, Form, Input, Flex } from "antd";
 import OrContinueWith from "../assets/ContinueWith.svg";
 
 import People from "../assets/peoples.svg";
+import { Link } from "react-router-dom";
 const Login = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
   return (
     <div className="bg-[var(--bg-secondary)] flex flex-col justify-center items-center">
+    <div className="absolute flex  top-8 left-8 text-[var(--text-secondary)] cursor-pointer text-xl  hover:text-[var(--text-primary)] transition-all delay-100 ease-in-out">
+    <Link to="/">&larr;<span className="hover:underline"> Go back </span> </Link>
+    </div>
       <div>
         <h1 className="text-6xl font-extralight mt-6 italic text-center text-[var(--text-secondary)]">
           Welcome <br />
