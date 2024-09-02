@@ -162,7 +162,7 @@ const Home = () => {
             </span>
           </button>
         </div>
-        <div className=" flex flex-col gap-0  justify-center items-center">
+        <div className="z-20 flex flex-col gap-0  justify-center items-center">
           <img
             
             src={Illu1}
