@@ -38,7 +38,7 @@ const Home = () => {
       //   Random Avatar from npc1, npc2, npc3
       avatar: NPC1,
       review:
-        "Study Bridge has been fantastic for connecting with local students. The direct messaging feature makes scheduling a breeze, and the app’s ease of use is a big plus. Highly recommended for tutors!",
+        "Study Bridge has been fantastic for connecting with local students. The direct messaging feature makes scheduling a breeze ...",
     },
     {
       name: "Jane Doe",
@@ -74,7 +74,7 @@ const Home = () => {
 
   const Team = [
     {
-      name: "John Doe",
+      name: "Vishvara",
       avatar: avatar1,
       role: "UX/UI Designer",
       desc: "Vishvara brings creativity and precision to Study Bridge's design. She focuses on crafting intuitive, user-friendly interfaces that make the platform easy and enjoyable to use for everyone.",

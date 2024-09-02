@@ -28,11 +28,12 @@
 }
 
 .review__card__content{
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
     text-align: center;
+
 }
