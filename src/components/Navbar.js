@@ -35,8 +35,8 @@ const Navbar = () => {
     <nav className="bg-[var(--bg-primary)] relative w-screen  p-4 flex justify-between ">
       <div className="mx-4" data-aos="fade-in">
         <svg
-          width="56"
-          height="56"
+          width="64"
+          height="64"
           viewBox="0 0 56 56"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
