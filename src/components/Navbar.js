@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="bg-[var(--bg-primary)] relative w-screen  p-4 flex justify-between ">
-      <div className="mx-4" data-aos="fade-in">
+      <div className="mx-4 hover:cursor-pointer z-50" data-aos="fade-in" onClick={() => window.location.replace("/")}>
         <svg
           width="64"
           height="64"

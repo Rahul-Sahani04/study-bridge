@@ -14,8 +14,8 @@ import NPC1 from "../assets/npc1.svg";
 import NPC2 from "../assets/npc2.svg";
 import NPC3 from "../assets/npc3.svg";
 
-import HowWeWave from "../assets/HowWeHelp.svg";
-import MessageTutWave from "../assets/MessageTutorWave.svg";
+// import HowWeWave from "../assets/HowWeHelp.svg";
+// import MessageTutWave from "../assets/MessageTutorWave.svg";
 
 import wavyBgMain from "../assets/BGWaves.svg";
 
@@ -26,9 +26,9 @@ import { TeamCard } from "../components/TeamCard";
 import avatar1 from "../assets/avatar1.svg";
 import avatar2 from "../assets/avatar2.svg";
 import avatar3 from "../assets/avatar3.svg";
-import ForwardRef from "../components/WavyBG";
-import LottieAnimation from "../components/LottieAnimation";
-import { HeroWaves } from "../components/CustomWaves";
+// import ForwardRef from "../components/WavyBG";
+// import LottieAnimation from "../components/LottieAnimation";
+// import { HeroWaves } from "../components/CustomWaves";
 import Wave from "react-wavify";
 
 const Home = () => {
@@ -98,11 +98,13 @@ const Home = () => {
       <Navbar />
       {/* First Section */}
       <div className="bg-[var(--bg-primary)] flex  flex-row justify-evenly items-center h-full pb-[5%] ">
+      {/* <div className="waveAnim absolute top-0  w-screen m-0 left-0 overflow-clip z-0 "> */}
         <img src={wavyBgMain} className="absolute top-0  w-screen m-0 left-0 overflow-clip z-0 "
         style={{
           transform: "scale(1.5, 1.1)",
         }}
          />
+        {/* </div> */}
         {/* <HeroWaves /> */}
         <div className=" z-20 flex flex-col justify-center items-center gap-0 p-0 m-0 w-full">
           <span
