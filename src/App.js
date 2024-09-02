@@ -1,10 +1,13 @@
 // src/App.js
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Login from "./pages/Login";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const navData = [
   {
@@ -35,16 +38,17 @@ const navData = [
 ];
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <Router>
       {/* <Navbar /> */}
       <Routes>
         {navData.map((nav, index) => (
-          <Route
-            key={index}
-            path={nav.URL}
-            element={nav.element}
-          />
+          <Route key={index} path={nav.URL} element={nav.element} />
         ))}
       </Routes>
     </Router>

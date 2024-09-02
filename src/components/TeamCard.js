@@ -2,7 +2,7 @@ import "../styles/TeamCard.css";
 
 export const TeamCard = ({ team }) => {
   return (
-    <div className="team__card">
+    <div data-aos="fade-left" className="team__card">
       <div className="team__card__avatar">
         <img src={team.avatar} alt={team.name} />
       </div>

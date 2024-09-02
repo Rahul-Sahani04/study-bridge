@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-import "../assets/Home.css";
+import "../styles/Home.css";
 
 import Illu1 from "../assets/Illu1.png";
 import Illu3 from "../assets/Illuu3.svg";
@@ -103,6 +103,8 @@ const Home = () => {
             style={{
               fontFamily: "Poppins",
             }}
+
+            data-aos="fade-in"
           >
             STUDY
           </span>
@@ -111,11 +113,12 @@ const Home = () => {
             style={{
               fontFamily: "Poor Story",
             }}
+            data-aos="fade-in"
           >
             BRIDGE
           </span>
 
-          <button className="bg-[var(--seconday-button)] text-[var(--text-secondary)] text-[40px]  px-8 py-2 gap-2 rounded-lg mt-4 flex justify-center items-center">
+          <button data-aos="fade-up" className="bg-[var(--seconday-button)] text-[var(--text-secondary)] text-[40px]  px-8 py-2 gap-2 rounded-lg mt-4 flex justify-center items-center">
             EXPLORE
             <span>
               <svg
@@ -149,8 +152,8 @@ const Home = () => {
           </button>
         </div>
         <div className=" flex flex-col gap-0  justify-center items-center">
-          <img src={Illu1} alt="Illustration" className="w-[75%]" />
-          <p className="mt-0 text-[24px]" style={{ fontFamily: "Poppins" }}>
+          <img data-aos="fade-left" src={Illu1} alt="Illustration" className="w-[75%]" id="homeIllu" />
+          <p data-aos="fade-left" data-aos-delay="250" data-aos-anchor="#homeIllu" className="mt-0 text-[24px]" style={{ fontFamily: "Poppins" }}>
             Where Students and Tutors Meet
           </p>
         </div>
@@ -167,6 +170,7 @@ const Home = () => {
             }}
 
             id="ourMission"
+            data-aos="fade-in"
           >
 
             Our Mission
@@ -178,6 +182,8 @@ const Home = () => {
             style={{
               fontFamily: "Poppins",
             }}
+
+            data-aos="flip-up"
           >
             We&nbsp;
             <span className="decoration-wavy underline" >
@@ -199,6 +205,9 @@ const Home = () => {
             style={{
               fontFamily: "Patrick Hand",
             }}
+
+            data-aos="fade-in"
+            id="howWeHelp"
           >
             We HELP you with
           </h1>
@@ -206,11 +215,11 @@ const Home = () => {
 
         <div className="flex flex-row justify-around items-center h-full mx-[10%] py-10">
           <div className=" flex  gap-0  justify-center items-center my-6">
-            <img src={Illu3} alt="Illustration" className="" />
+            <img src={Illu3} alt="Illustration" className="" data-aos="flip-left"/>
           </div>
 
-          <div className="flex justify-center items-center gap-0 p-0 m-0 w-full">
-            <div>
+          <div  className="flex justify-center items-center gap-0 p-0 m-0 w-full">
+            <div   data-aos="fade-left">
               <h1 className=" text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
                 <span>Nearby</span> &nbsp; Learning
               </h1>
@@ -235,6 +244,7 @@ const Home = () => {
               style={{
                 fontFamily: "Poppins",
               }}
+              data-aos="fade-right"
             >
               <h1 className=" text-[48px] text-[var(--text-secondary)] text-left font-semibold">
                 Tutors for Every Level
@@ -249,7 +259,7 @@ const Home = () => {
               </h3>
             </div>
 
-            <div className="w-2/5 mx-5 flex  gap-0  justify-center items-center">
+            <div data-aos="zoom-in" className="w-2/5 mx-5 flex  gap-0  justify-center items-center">
               <img src={Illu4} alt="Illustration" className="" />
             </div>
           </div>
@@ -257,9 +267,9 @@ const Home = () => {
       </div>
 
       {/* Fifth Section */}
-      <img src={MessageTutWave} className="w-full h-auto" alt="How We Wave" />
+      <img  src={MessageTutWave} className="w-full h-auto" alt="How We Wave" />
       <div className="bg-[var(--bg-primary)] flex flex-row justify-evenly items-center ">
-        <div className="w-2/5 flex  gap-0 p-0 m-0  pr-0 items-center my-[10%]">
+        <div data-aos="fade-right" className="w-2/5 flex  gap-0 p-0 m-0  pr-0 items-center my-[10%]">
           <img src={Illu5} alt="Illustration" className="p-0 pl-[15%]" />
         </div>
         <div className="flex flex-row justify-around items-center h-full  w-2/3">
@@ -269,6 +279,7 @@ const Home = () => {
               style={{
                 fontFamily: "Poppins",
               }}
+              data-aos="fade-up"
             >
               <h1 className=" text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
                 Message Tutors Directly
@@ -289,11 +300,11 @@ const Home = () => {
         <img src={HowWeWave} className="w-full" ></img>
       {/* Sixth Section */}
       <div className="bg-[var(--bg-secondary)]" id="reviews">
-        <h1 className="text-[96px] py-[2%] text-[var(--text-secondary)] text-center font-semibold">
+        <h1 data-aos="fade-in" className="text-[96px] py-[2%] text-[var(--text-secondary)] text-center font-semibold">
           How we Helped!
         </h1>
 
-        <div className="no-scrollbar gap-[5%] flex flex-row justify-around items-center w-full h-full px-5 py-10 overflow-x-auto scrollbar-hide">
+        <div data-aos="fade-left" className="auto-scroll no-scrollbar gap-[5%] flex flex-row justify-around items-center w-full h-full px-5 py-10 overflow-x-auto scrollbar-hide">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
@@ -302,7 +313,7 @@ const Home = () => {
 
       {/* Seventh Section */}
       <div className="team__container bg-[var(--bg-primary)]" id="about">
-        <h1 className="text-[96px] py-[2%] text-[var(--bg-secondary)] text-center font-semibold">
+        <h1 data-aos="fade-in" className="text-[96px] py-[2%] text-[var(--bg-secondary)] text-center font-semibold">
           The Team!
         </h1>
 

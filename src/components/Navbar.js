@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="bg-[var(--bg-primary)] relative w-screen  p-4 flex justify-between ">
-      <div className="mx-4">
+      <div className="mx-4" data-aos="fade-in">
         <svg
           width="56"
           height="56"
@@ -48,7 +48,7 @@ const Navbar = () => {
           />
         </svg>
       </div>
-      <ul className="flex space-x-4 flex-row justify-center z-50 gap-x-10 items-center p-4">
+      <ul data-aos="fade-in" className="flex space-x-4 flex-row justify-center z-50 gap-x-10 items-center p-4">
         {navData.map((item, index) => (
           <CustomLink key={index} data={item.name} url={item.url} />
         ))}

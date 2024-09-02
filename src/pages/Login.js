@@ -14,10 +14,10 @@ const Login = () => {
   };
   return (
     <div className="bg-[var(--bg-secondary)] flex flex-col justify-center items-center">
-    <div className="absolute flex  top-8 left-8 text-[var(--text-secondary)] cursor-pointer text-xl  hover:text-[var(--text-primary)] transition-all delay-100 ease-in-out">
+    <div data-aos="fade-right" className="absolute flex  top-8 left-8 text-[var(--text-secondary)] cursor-pointer text-xl  hover:text-[var(--text-primary)] transition-all delay-100 ease-in-out">
     <Link to="/">&larr;<span className="hover:underline"> Go back </span> </Link>
     </div>
-      <div>
+      <div data-aos="fade-down">
         <h1 className="text-6xl font-extralight mt-6 italic text-center text-[var(--text-secondary)]">
           Welcome <br />
           <span> to </span>
@@ -26,7 +26,7 @@ const Login = () => {
         </h1>
       </div>
 
-      <div className="login__form">
+      <div className="login__form" data-aos="fade-in">
         <Form
           name="login"
           initialValues={{
@@ -99,7 +99,7 @@ const Login = () => {
         </div>
       </div>
 
-      <img  src={People} alt="People" className="people__image" />
+      <img data-aos="fade-up" src={People} alt="People" className="people__image" />
     </div>
   );
 };
