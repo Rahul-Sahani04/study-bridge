@@ -6,8 +6,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Login from "./pages/Login";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const navData = [
   {
@@ -38,11 +36,7 @@ const navData = [
 ];
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
+
   return (
     <Router>
       {/* <Navbar /> */}
