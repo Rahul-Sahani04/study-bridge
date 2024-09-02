@@ -9,11 +9,13 @@
     "antd": "^5.20.3",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.20",
+    "lottie-react": "^2.4.0",
     "postcss": "^8.4.42",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "react-wavify": "^1.11.1",
     "tailwindcss": "^3.4.10",
     "web-vitals": "^2.1.4"
   },

@@ -14,10 +14,10 @@ import NPC1 from "../assets/npc1.svg";
 import NPC2 from "../assets/npc2.svg";
 import NPC3 from "../assets/npc3.svg";
 
-import HowWeWave from "../assets/HowWeHelp.svg"
-import MessageTutWave from "../assets/MessageTutorWave.svg"
+import HowWeWave from "../assets/HowWeHelp.svg";
+import MessageTutWave from "../assets/MessageTutorWave.svg";
 
-import wavyBgMain from "../assets/BGWaves.svg"
+import wavyBgMain from "../assets/BGWaves.svg";
 
 import { ReviewCard } from "../components/ReviewCard";
 import { TeamCard } from "../components/TeamCard";
@@ -27,52 +27,55 @@ import avatar1 from "../assets/avatar1.svg";
 import avatar2 from "../assets/avatar2.svg";
 import avatar3 from "../assets/avatar3.svg";
 import ForwardRef from "../components/WavyBG";
+import LottieAnimation from "../components/LottieAnimation";
+import { HeroWaves } from "../components/CustomWaves";
+import Wave from "react-wavify";
 
 const Home = () => {
   const reviews = [
     {
       name: "John Doe",
-    //   Random Avatar from npc1, npc2, npc3
-        avatar: NPC1,
+      //   Random Avatar from npc1, npc2, npc3
+      avatar: NPC1,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Study Bridge has been fantastic for connecting with local students. The direct messaging feature makes scheduling a breeze, and the app’s ease of use is a big plus. Highly recommended for tutors!",
     },
     {
       name: "Jane Doe",
       avatar: NPC2,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Study Bridge made it so easy to find a local tutor. Scheduling was a breeze, and the demo class was incredibly helpful!",
     },
     {
       name: "Shyaam",
       avatar: NPC3,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Study Bridge connected me with a fantastic tutor nearby. The process was straightforward, and I got the help I needed right away.",
     },
     {
       name: "Ram",
       avatar: NPC2,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Study Bridge is a great platform for finding local tutors. The direct messaging feature is a big plus, and the app is easy to use. Highly recommended!",
     },
     {
       name: "Ram",
       avatar: NPC1,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Study Bridge connected me with a fantastic tutor nearby. The process was straightforward, and I got the help I needed right away.",
     },
     {
       name: "Ram",
       avatar: NPC3,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Study Bridge made it so easy to find a local tutor. Scheduling was a breeze, and the demo class was incredibly helpful!",
     },
   ];
 
   const Team = [
     {
       name: "John Doe",
-        avatar: avatar1,
+      avatar: avatar1,
       role: "UX/UI Designer",
       desc: "Vishvara brings creativity and precision to Study Bridge's design. She focuses on crafting intuitive, user-friendly interfaces that make the platform easy and enjoyable to use for everyone.",
     },
@@ -91,19 +94,18 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-[var(--bg-secondary)] w-screen overflow-x-clip p-0 homeBody"
-    >
+    <div className="bg-[var(--bg-secondary)] relative w-screen overflow-x-clip p-0 homeBody">
       <Navbar />
       {/* First Section */}
-      <div className="bg-[var(--bg-primary)] flex flex-row justify-evenly items-center h-full pb-[5%] ">
+      <div className="bg-[var(--bg-primary)] flex  flex-row justify-evenly items-center h-full pb-[5%] ">
+        {/* <img src={wavyBgMain} className="absolute top-0 left-0 w-screen overflow-clip z-0" /> */}
+        <HeroWaves />
         <div className=" z-20 flex flex-col justify-center items-center gap-0 p-0 m-0 w-full">
-        <img src={wavyBgMain} className="absolute top-0 left-0 w-screen z-0" />
           <span
             className=" text-[150px] text-[var(--text-primary)] p-0 text-center font-[900]"
             style={{
               fontFamily: "Poppins",
             }}
-
             data-aos="fade-in"
           >
             STUDY
@@ -118,7 +120,10 @@ const Home = () => {
             BRIDGE
           </span>
 
-          <button data-aos="fade-up" className="bg-[var(--seconday-button)] text-[var(--text-secondary)] text-[40px]  px-8 py-2 gap-2 rounded-lg mt-4 flex justify-center items-center">
+          <button
+            data-aos="fade-up"
+            className="bg-[var(--seconday-button)] text-[var(--text-secondary)] text-[40px]  px-8 py-2 gap-2 rounded-lg mt-4 flex justify-center items-center"
+          >
             EXPLORE
             <span>
               <svg
@@ -152,8 +157,20 @@ const Home = () => {
           </button>
         </div>
         <div className=" flex flex-col gap-0  justify-center items-center">
-          <img data-aos="fade-left" src={Illu1} alt="Illustration" className="w-[75%]" id="homeIllu" />
-          <p data-aos="fade-left" data-aos-delay="250" data-aos-anchor="#homeIllu" className="mt-0 text-[24px]" style={{ fontFamily: "Poppins" }}>
+          <img
+            
+            src={Illu1}
+            alt="Illustration"
+            className="w-[75%]"
+            id="homeIllu"
+          />
+          <p
+            
+            data-aos-delay="250"
+            data-aos-anchor="#homeIllu"
+            className="mt-0 text-[24px]"
+            style={{ fontFamily: "Poppins" }}
+          >
             Where Students and Tutors Meet
           </p>
         </div>
@@ -166,13 +183,11 @@ const Home = () => {
             className="relative text-[150px] text-[var(--text-primary)] text-center font-[900]"
             style={{
               fontFamily: "Poppins",
-              color: "#5E503F"
+              color: "#5E503F",
             }}
-
             id="ourMission"
             data-aos="fade-in"
           >
-
             Our Mission
           </h1>
         </div>
@@ -182,17 +197,11 @@ const Home = () => {
             style={{
               fontFamily: "Poppins",
             }}
-
-            data-aos="flip-up"
           >
             We&nbsp;
-            <span className="decoration-wavy underline" >
-             help</span> you &nbsp;
-             <span className="circle__decor">
-             find
-             </span>
-             &nbsp;
-              a tutor or student right in your own locality.
+            <span className="decoration-wavy underline">help</span> you &nbsp;
+            <span className="circle__decor">find</span>
+            &nbsp; a tutor or student right in your own locality.
           </h1>
         </div>
       </div>
@@ -205,7 +214,6 @@ const Home = () => {
             style={{
               fontFamily: "Patrick Hand",
             }}
-
             data-aos="fade-in"
             id="howWeHelp"
           >
@@ -215,11 +223,16 @@ const Home = () => {
 
         <div className="flex flex-row justify-around items-center h-full mx-[10%] py-10">
           <div className=" flex  gap-0  justify-center items-center my-6">
-            <img src={Illu3} alt="Illustration" className="" data-aos="flip-left"/>
+            <img
+              src={Illu3}
+              alt="Illustration"
+              className=""
+              
+            />
           </div>
 
-          <div  className="flex justify-center items-center gap-0 p-0 m-0 w-full">
-            <div   data-aos="fade-left">
+          <div className="flex justify-center items-center gap-0 p-0 m-0 w-full">
+            <div >
               <h1 className=" text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
                 <span>Nearby</span> &nbsp; Learning
               </h1>
@@ -244,7 +257,7 @@ const Home = () => {
               style={{
                 fontFamily: "Poppins",
               }}
-              data-aos="fade-right"
+              
             >
               <h1 className=" text-[48px] text-[var(--text-secondary)] text-left font-semibold">
                 Tutors for Every Level
@@ -259,7 +272,10 @@ const Home = () => {
               </h3>
             </div>
 
-            <div data-aos="zoom-in" className="w-2/5 mx-5 flex  gap-0  justify-center items-center">
+            <div
+              
+              className="w-2/5 mx-5 flex  gap-0  justify-center items-center"
+            >
               <img src={Illu4} alt="Illustration" className="" />
             </div>
           </div>
@@ -267,9 +283,30 @@ const Home = () => {
       </div>
 
       {/* Fifth Section */}
-      <img  src={MessageTutWave} className="w-full h-auto" alt="How We Wave" />
+      <div className="relative">
+        <Wave 
+          fill='#EBE0D5'
+          paused={false}
+          style={{
+            position: 'absolute',
+            zIndex: 0,
+            bottom: 0,
+            left: 0,
+          }}
+          options={{
+            height: 30,
+            amplitude: 30,
+            speed: 0.15,
+            points: 20
+          }}
+    />
+      </div>
+      {/* <img src={MessageTutWave} className="w-full h-auto" alt="How We Wave" /> */}
       <div className="bg-[var(--bg-primary)] flex flex-row justify-evenly items-center ">
-        <div data-aos="fade-right" className="w-2/5 flex  gap-0 p-0 m-0  pr-0 items-center my-[10%]">
+        <div
+          
+          className="w-2/5 flex  gap-0 p-0 m-0  pr-0 items-center my-[10%]"
+        >
           <img src={Illu5} alt="Illustration" className="p-0 pl-[15%]" />
         </div>
         <div className="flex flex-row justify-around items-center h-full  w-2/3">
@@ -279,7 +316,6 @@ const Home = () => {
               style={{
                 fontFamily: "Poppins",
               }}
-              data-aos="fade-up"
             >
               <h1 className=" text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
                 Message Tutors Directly
@@ -297,14 +333,39 @@ const Home = () => {
         </div>
       </div>
 
-        <img src={HowWeWave} className="w-full" ></img>
+      {/* <img src={HowWeWave} className="w-full" ></img> */}
+
       {/* Sixth Section */}
-      <div className="bg-[var(--bg-secondary)]" id="reviews">
-        <h1 data-aos="fade-in" className="text-[96px] py-[2%] text-[var(--text-secondary)] text-center font-semibold">
+      <div className="relative">
+        <Wave
+          fill="#5E503F"
+          paused={false}
+          style={{
+            position: "absolute",
+            zIndex: 0,
+            bottom: 0,
+            left: 0,
+          }}
+          options={{
+            height: 30,
+            amplitude: 30,
+            speed: 0.15,
+            points: 10,
+          }}
+        />
+      </div>
+      <div className="bg-[var(--bg-secondary)] relative" id="reviews">
+        <h1
+          data-aos="fade-in"
+          className="text-[96px] py-[2%] text-[var(--text-secondary)] text-center font-semibold"
+        >
           How we Helped!
         </h1>
 
-        <div data-aos="fade-left" className="auto-scroll no-scrollbar gap-[5%] flex flex-row justify-around items-center w-full h-full px-5 py-10 overflow-x-auto scrollbar-hide">
+        <div
+          
+          className="auto-scroll no-scrollbar gap-[5%] flex flex-row justify-around items-center w-full h-full px-5 py-10 overflow-x-auto scrollbar-hide"
+        >
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
@@ -313,7 +374,10 @@ const Home = () => {
 
       {/* Seventh Section */}
       <div className="team__container bg-[var(--bg-primary)]" id="about">
-        <h1 data-aos="fade-in" className="text-[96px] py-[2%] text-[var(--bg-secondary)] text-center font-semibold">
+        <h1
+          data-aos="fade-in"
+          className="text-[96px] py-[2%] text-[var(--bg-secondary)] text-center font-semibold"
+        >
           The Team!
         </h1>
 
@@ -323,7 +387,24 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="curve"/>
+      </div>
+      <div className="relative mt-[10%]">
+        <Wave 
+          fill='#5E503F'
+          paused={false}
+          style={{
+            position: 'absolute',
+            zIndex: 0,
+            bottom: 50,
+            left: 0,
+          }}
+          options={{
+            height: 20,
+            amplitude: 50,
+            speed: 0.15,
+            points: 2
+          }}
+    />
       </div>
     </div>
   );

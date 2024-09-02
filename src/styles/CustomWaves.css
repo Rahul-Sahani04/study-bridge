@@ -1,0 +1,53 @@
+.wave svg {
+    width: 100%;
+    height: 100px;
+    
+}
+
+svg path {
+
+    transition: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+svg:hover path {
+    d: var(--d);
+}
+
+/* 
+  
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+} */
+.waveTop {
+    background-size: 50% 100px;
+}
+
+.waveAnimation {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.waveMiddle {
+    background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
