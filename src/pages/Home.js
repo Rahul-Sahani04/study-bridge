@@ -99,7 +99,7 @@ const Home = () => {
       {/* First Section */}
       <div className="bg-[var(--bg-primary)] flex  flex-row justify-evenly items-center h-full pb-[5%] ">
         {/* <img src={wavyBgMain} className="absolute top-0 left-0 w-screen overflow-clip z-0" /> */}
-        <HeroWaves />
+        {/* <HeroWaves /> */}
         <div className=" z-20 flex flex-col justify-center items-center gap-0 p-0 m-0 w-full">
           <span
             className=" text-[150px] text-[var(--text-primary)] p-0 text-center font-[900]"
@@ -121,7 +121,7 @@ const Home = () => {
           </span>
 
           <button
-            data-aos="fade-up"
+            data-aos="fade-in"
             className="bg-[var(--seconday-button)] text-[var(--text-secondary)] text-[40px]  px-8 py-2 gap-2 rounded-lg mt-4 flex justify-center items-center"
           >
             EXPLORE
