@@ -103,8 +103,8 @@ const MatchingPage = () => {
         />
 
         <div className="w-2/5 flex ">
-          <ProfileCard user={profileData[0]} classes={"-rotate-[20deg]"} />
-          <ProfileCard user={profileData[1]} classes={"rotate-[10deg]"} />
+          <ProfileCard user={profileData[0]} classes={"-rotate-[20deg] hover:-rotate-[10deg] transition-all duration-500"} />
+          <ProfileCard user={profileData[1]} classes={"rotate-[10deg] hover:rotate-[0deg] transition-all duration-500"} />
         </div>
       </div>
     </div>
