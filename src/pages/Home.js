@@ -376,12 +376,6 @@ const Home = () => {
           ))}
         </div>
 
-        <ReviewCard review={{
-          name: "John Doe",
-          avatar: NPC1,
-          review:
-            "Study Bridge has been fantastic for connecting with local students. The direct messaging feature makes scheduling a breeze ...",
-        }} />
       </div>
 
       {/* Seventh Section */}
