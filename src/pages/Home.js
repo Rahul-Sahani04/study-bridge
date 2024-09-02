@@ -98,7 +98,11 @@ const Home = () => {
       <Navbar />
       {/* First Section */}
       <div className="bg-[var(--bg-primary)] flex  flex-row justify-evenly items-center h-full pb-[5%] ">
-        {/* <img src={wavyBgMain} className="absolute top-0 left-0 w-screen overflow-clip z-0" /> */}
+        <img src={wavyBgMain} className="absolute top-0  w-screen m-0 left-0 overflow-clip z-0 "
+        style={{
+          transform: "scale(1.5, 1.1)",
+        }}
+         />
         {/* <HeroWaves /> */}
         <div className=" z-20 flex flex-col justify-center items-center gap-0 p-0 m-0 w-full">
           <span
