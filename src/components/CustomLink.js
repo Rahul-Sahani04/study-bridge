@@ -1,10 +1,22 @@
+import { useNavigate } from "react-router-dom";
 
 const CustomLink = ({ data, url }) => {
+  const navigate = useNavigate();
   const handleClick = () => {
     console.log("clicked");
+    try {
 
-      document.getElementById(url).scrollIntoView({ behavior: "smooth" });
-  }
+      if (url.includes("/")) {
+        navigate(url);
+      } else {
+        document.getElementById(url).scrollIntoView({ behavior: "smooth" });
+      }
+    } catch (error) {
+      console.log(error);
+      navigate("/#" + url);
+    }
+
+  };
   return (
     <a
       // href={url}

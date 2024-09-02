@@ -29,7 +29,11 @@ const Navbar = () => {
     {
         name: "Reviews",
         url: "reviews",
-    }
+    },
+    {
+        name: "Match",
+        url: "/match",
+    },
   ];
   return (
     <nav className="bg-[var(--bg-primary)] relative w-screen  p-4 flex justify-between ">
