@@ -1,0 +1,137 @@
+.teacher__card__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 10px;
+}
+
+.teacher__card{
+    width: 90%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    color: var(--text-secondary);
+
+    background-color: var(--bg-secondary);
+}
+
+.teacher__card__avatar{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+}
+
+.teacher__card__avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.teacher__card__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.teacher__card__header h3{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: end;
+}
+
+.teacher_card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 70%;
+}
+
+.teacher__card__body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 800;
+}
+
+.teacher__card__body p{
+    color: #D7BE82;
+}
+
+.teacher__card__desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 100%;
+
+    font-size: 12px;
+}
+
+.profile__card{
+    width: 250px;
+    height: 400px;
+
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 32px;
+    background-color: var(--bg-secondary);
+
+    overflow: hidden;
+
+    color: var(--text-secondary);
+
+
+}
+
+.profile__card__avatar{
+    width: 95%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+}
+
+.profile__card__avatar img{
+    width: 80%;
+    height: 90%;
+}

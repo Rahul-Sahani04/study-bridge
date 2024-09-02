@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Login from "./pages/Login";
+import MatchingPage from "./pages/Match";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,6 +36,11 @@ const navData = [
     URL: "/reviews",
     element: <div>Reviews Page</div>,
   },
+  {
+    name: "Match",
+    URL: "/match",
+    element: <MatchingPage />,
+  },
 ];
 
 function App() {
@@ -43,6 +49,7 @@ function App() {
       duration: 1000,
     });
   }, []);
+
   return (
     <Router>
       {/* <Navbar /> */}

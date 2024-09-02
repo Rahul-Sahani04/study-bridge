@@ -239,14 +239,13 @@ const Home = () => {
 
           <div className="flex justify-center items-center gap-0 p-0 m-0 w-full">
             <div >
-              <h1 className=" text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
+              <h1 className="text-[48px] text-[var(--bg-secondary)] text-left font-semibold">
                 <span>Nearby</span> &nbsp; Learning
               </h1>
               <h3 className="text-[24px] text-[var(--bg-secondary)] text-left font-medium pb-[12%]">
                 Discover the perfect tutor or student right in your
                 neighborhood. <br />
-                Connect locally and make learning more convenient.
-                <br />
+                Connect locally and make learning more convenient. <br />
                 With Study Bridge, education is always within reach!
               </h3>
             </div>
@@ -376,6 +375,13 @@ const Home = () => {
             <ReviewCard key={index} review={review} />
           ))}
         </div>
+
+        <ReviewCard review={{
+          name: "John Doe",
+          avatar: NPC1,
+          review:
+            "Study Bridge has been fantastic for connecting with local students. The direct messaging feature makes scheduling a breeze ...",
+        }} />
       </div>
 
       {/* Seventh Section */}
